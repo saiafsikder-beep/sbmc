@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBMC-26 | দৈনন্দিন কাজ</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">SBMC-26</a>
+            <ul>
+                <li><a href="index.html">হোম</a></li>
+                <li><a href="groups.html">আমাদের গ্রুপ</a></li>
+                <li><a href="tasks.html" class="active">দৈনন্দিন কাজ</a></li>
+                <li><a href="memories.html">স্মৃতি স্মারক</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="tabs">
+            <button class="tab-link active" onclick="openTab(event, 'daily')">দৈনন্দিন কাজ</button>
+            <button class="tab-link" onclick="openTab(event, 'special')">বিশেষ দায়িত্ব</button>
+        </div>
+
+        <div id="daily" class="tab-content" style="display: block;">
+            <h2>দৈনন্দিন কাজ</h2>
+            <div class="task-schedule">
+                <div class="task-card">
+                    <h3>খাবার বন্টন</h3>
+                    <div id="daily-task-groups-1">
+                        <!-- গ্রুপগুলোর নাম এখানে JavaScript দিয়ে যুক্ত হবে -->
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>ময়লার ঝুড়ি পরিষ্কার</h3>
+                    <div id="daily-task-groups-2">
+                         <!-- গ্রুপগুলোর নাম এখানে JavaScript দিয়ে যুক্ত হবে -->
+                    </div>
+                </div>
+            </div>
+            <div class="notice-board">
+                <h3>নোটিশ বোর্ড</h3>
+                <p>এখানে প্রতিদিনের নোটিশ লেখা হবে। যেমন: "আজ আসরের পর সকল সদস্যের উপস্থিতি বাধ্যতামূলক।" এই লেখাটি পরিবর্তন করতে `tasks.html` ফাইলটি এডিট করুন।</p>
+            </div>
+        </div>
+
+        <div id="special" class="tab-content">
+            <h2>বিশেষ দায়িত্ব (প্রতি ৬ সপ্তাহ পর)</h2>
+            <div class="task-schedule">
+                <div class="task-card">
+                    <h3>ওয়াশরুম পরিষ্কার</h3>
+                     <div id="special-task-groups-1">
+                        <!-- গ্রুপগুলোর নাম এখানে JavaScript দিয়ে যুক্ত হবে -->
+                    </div>
+                </div>
+                <div class="task-card">
+                    <h3>মসজিদ পরিষ্কার</h3>
+                    <div id="special-task-groups-2">
+                         <!-- গ্রুপগুলোর নাম এখানে JavaScript দিয়ে যুক্ত হবে -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024, SBMC-26 | সমস্ত অধিকার সংরক্ষিত।</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
