@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const groups = [
             "প্রথম গ্রুপ (ইমরান মৃধা)", 
             "দ্বিতীয় গ্রুপ (সাদিক মুরসালিন)", 
-            "তৃতীয় গ্রুপ (মাহমুদ বিন মুইন)", 
+            "তৃতীয় গ্রুপ (মাহমুদ বিন মুঈন)", 
             "চতুর্থ গ্রুপ (হাসিব মিয়া)", 
             "পঞ্চম গ্রুপ (মুহাম্মদ সাফওয়ান)", 
             "ষষ্ঠ গ্রুপ (মারুফুর রহমান)"
@@ -86,5 +86,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
 });
+
 
 
