@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (document.getElementById('daily-task-groups-1')) {
         
         const groups = [
-            "প্রথম গ্রুপ", 
+            "প্রথম গ্রুপ (ইমরান ভাইয়ের গ্রুপ)", 
             "দ্বিতীয় গ্রুপ", 
             "তৃতীয় গ্রুপ", 
             "চতুর্থ গ্রুপ", 
@@ -84,4 +84,5 @@ document.addEventListener('DOMContentLoaded', function() {
             specialTaskContainer2.appendChild(div2);
         });
     }
+
 });
