@@ -93,7 +93,7 @@ nav ul li a:hover, nav ul li a.active {
 }
 
 .quote {
-    font-family: 'Hind Siliguri', sans-serif; /* লিপিঘর থেকে আনা ফন্টের নাম এখানে দিতে হবে */
+    font-family: 'Hind Siliguri', sans-serif;
     font-size: 1.5em;
     font-style: italic;
     color: var(--primary-color);
@@ -197,6 +197,30 @@ nav ul li a:hover, nav ul li a.active {
 .card-back p {
     margin: 5px 0;
     font-size: 0.9em;
+}
+
+/* === ফেসবুক লিংক আইকন (নতুন) === */
+.card-back .facebook-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 6px 12px;
+    background-color: #1877F2;
+    color: var(--light-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+.card-back .facebook-link:hover {
+    background-color: #166fe5;
+}
+.card-back .facebook-link svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
 }
 
 /* === গ্রুপ পেজ === */
