@@ -13,7 +13,7 @@ body {
     font-family: var(--font-main);
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f4f4f4; /* একটু ভিন্ন ব্যাকগ্রাউন্ড */
     color: var(--text-color);
     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e0e0e0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
@@ -199,7 +199,7 @@ nav ul li a:hover, nav ul li a.active {
     font-size: 0.9em;
 }
 
-/* === ফেসবুক লিংক আইকন (নতুন) === */
+/* === ফেসবুক লিংক আইকন === */
 .card-back .facebook-link {
     display: inline-flex;
     align-items: center;
@@ -359,42 +359,62 @@ nav ul li a:hover, nav ul li a.active {
     color: var(--dark-color);
 }
 
-/* === স্মৃতি পেজ === */
+/* === স্মৃতি পেজ (নতুন পোলারয়েড ডিজাইন) === */
 .memory-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
 }
-.memory-card {
-    display: flex;
-    align-items: center;
+
+.memory-card-polaroid {
     background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    padding: 15px;
+    padding-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
-.memory-card img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin-right: 20px;
+
+.memory-card-polaroid:hover {
+    transform: scale(1.05) rotate(0deg) !important; /* সোজা হয়ে বড় হবে */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 10;
+    position: relative;
+}
+
+/* এলোমেলো ইফেক্ট দেওয়ার জন্য */
+.memory-card-polaroid:nth-child(4n+1) { transform: rotate(-4deg); }
+.memory-card-polaroid:nth-child(4n+2) { transform: rotate(2deg); }
+.memory-card-polaroid:nth-child(4n+3) { transform: rotate(5deg); }
+.memory-card-polaroid:nth-child(4n+4) { transform: rotate(-2deg); }
+
+.memory-card-polaroid img {
+    width: 100%;
+    height: 180px;
     object-fit: cover;
+    border: 1px solid #eee;
 }
-.memory-content blockquote {
-    font-size: 1.2em;
-    font-style: italic;
-    color: var(--dark-color);
+
+.memory-content-polaroid {
+    padding: 15px 5px 0 5px;
+}
+
+.memory-content-polaroid blockquote {
+    font-size: 1.1em;
+    color: #444;
     margin: 0;
-    border-left: 3px solid var(--primary-color);
-    padding-left: 15px;
+    font-style: italic;
 }
-.memory-content cite {
+
+.memory-content-polaroid cite {
     display: block;
-    text-align: right;
     margin-top: 10px;
-    color: var(--primary-color);
     font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1em;
 }
+
 
 /* === ফুটার === */
 footer {
