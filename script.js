@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
         
         // রেফারেন্স তারিখ (যেদিন থেকে প্রথম গ্রুপ কাজ শুরু করেছে)
-        const startDate = new Date('2024-10-14'); 
+        const startDate = new Date('2024-10-13'); 
         const today = new Date();
         
         // দিনের পার্থক্য বের করা
@@ -74,3 +74,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
