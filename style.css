@@ -1,14 +1,14 @@
 /* =================================
-   সাধারণ স্টাইল (আপনার মূল ডিজাইন)
+   আপনার মূল এবং পুনরুদ্ধার করা ডিজাইন
    ================================= */
 body {
     font-family: 'Hind Siliguri', sans-serif;
     margin: 0;
-    background-color: #f4f4f9;
+    background-color: #f4f4f9; /* মূল ব্যাকগ্রাউন্ড রঙ */
     color: #333;
     line-height: 1.6;
-    /* আপনার ব্যাকগ্রাউন্ড প্যাটার্ন ফিরিয়ে আনার জন্য এটি ব্যবহার করতে পারেন */
-    /* background-image: url('your-pattern-image-url.png'); */
+    /* আপনার হারানো প্যাটার্ন ফিরিয়ে আনতে নিচের লাইনটি ব্যবহার করুন */
+    /* background-image: url('আপনার-প্যাটার্নের-লিঙ্ক.png'); */
 }
 
 .container {
@@ -40,7 +40,7 @@ nav {
 nav .logo {
     font-size: 1.8rem;
     font-weight: 700;
-    color: #5d3a9b; /* আপনার মূল লোগোর রঙ */
+    color: #333; /* আপনার লোগোর মূল রঙ */
     text-decoration: none;
 }
 
@@ -66,7 +66,7 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a.active {
-    background-color: #5d3a9b;
+    background-color: #6c757d; /* আপনার মূল অ্যাক্টিভ মেনুর রঙ */
     color: #fff;
 }
 
@@ -78,18 +78,8 @@ footer {
     margin-top: 2rem;
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-}
-
-.hamburger .line {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
-    transition: 0.3s;
-}
+.hamburger { display: none; cursor: pointer; }
+.hamburger .line { width: 25px; height: 3px; background-color: #333; margin: 5px 0; }
 
 /* =================================
    হোমপেজ স্টাইল (আপনার মূল ডিজাইন)
@@ -97,7 +87,7 @@ footer {
 .hero-section {
     text-align: center;
     padding: 50px 20px;
-    background: #5d3a9b;
+    background: #6f42c1; /* আপনার হিরো সেকশনের মূল রঙ */
     color: white;
     border-radius: 8px;
     margin-bottom: 30px;
@@ -133,11 +123,12 @@ footer {
     text-align: center;
     margin-bottom: 30px;
     color: #333;
+    font-weight: 600;
 }
 
 .student-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr); /* এক লাইনে ৫টি কার্ড */
     gap: 25px;
 }
 
@@ -160,7 +151,6 @@ footer {
     position: absolute;
     width: 100%;
     height: 100%;
-    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     display: flex;
     flex-direction: column;
@@ -175,8 +165,8 @@ footer {
     background-color: #fff;
 }
 .card-back {
-    background-color: #5d3a9b; /* আপনার দরজার মতো খোলার ইফেক্টের রঙ */
-    color: white;
+    background-color: #6f42c1; /* আপনার পছন্দের পার্পল রঙ */
+    color: #fff; /* ভেতরের লেখাগুলো এখন সাদা এবং স্পষ্ট দেখা যাবে */
     transform: rotateY(180deg);
 }
 .student-card img {
@@ -185,36 +175,57 @@ footer {
     border-radius: 50%;
     margin-bottom: 15px;
     object-fit: cover;
-    border: 3px solid #ddd;
+    border: 3px solid #f0f0f0;
 }
-.student-card h3 {
-    margin: 10px 0 5px; font-size: 1.1rem; color: #333;
-}
-.student-card p {
-    margin: 0; color: #777;
-}
-.card-back h4 {
-    margin-bottom: 10px;
-}
-.card-back p {
-    font-size: 0.9rem; margin: 4px 0;
-}
+.student-card h3 { margin: 10px 0 5px; font-size: 1.1rem; color: #333; }
+.student-card p { margin: 0; color: #777; }
+.card-back h4 { margin-bottom: 10px; }
+.card-back p { font-size: 0.9rem; margin: 4px 0; }
 .card-back .facebook-link {
-    margin-top: 15px; text-decoration: none; color: #5d3a9b; background-color: #fff; padding: 8px 15px; border-radius: 20px; font-weight: bold;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #6f42c1;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
 }
+.facebook-link svg { width: 16px; height: 16px; }
 
 /* =================================
    অন্যান্য পেজের স্টাইল (আপনার মূল ডিজাইন)
    ================================= */
-.leaders { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
-.leader-card { background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; width: 30%; min-width: 280px;}
+.leadership-section .leaders {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+.leadership-section .leader-card {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    width: 80%;
+}
+.leadership-section .leader-card:first-child {
+    grid-column: 1 / -1; /* আমির/ক্যাপ্টেন মাঝখানে থাকবে */
+    width: 50%;
+    justify-self: center;
+}
 
 .group-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .group-card { padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-.group-card h3 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin: 0 0 15px; }
+.group-card h3 { border-bottom: 2px solid rgba(0,0,0,0.1); padding-bottom: 10px; margin: 0 0 15px; }
 .group-card ul { list-style: none; padding: 0; margin: 0; }
-.group-card ul li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
-/* গ্রুপ কার্ডের জন্য আলাদা রঙ */
+.group-card ul li { padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.05); }
+
+/* গ্রুপ কার্ডের জন্য আপনার মূল রঙগুলো */
 .group-card:nth-child(6n+1) { background-color: #e3f2fd; }
 .group-card:nth-child(6n+2) { background-color: #e8f5e9; }
 .group-card:nth-child(6n+3) { background-color: #fff3e0; }
@@ -225,7 +236,6 @@ footer {
 .memory-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
 .memory-card-polaroid { background-color: #fff; border: 1px solid #ddd; padding: 15px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
 .memory-card-polaroid img { max-width: 100%; height: auto; margin-bottom: 15px; }
-/* স্মৃতি স্মারকের বাঁকানো ডিজাইন */
 .memory-card-polaroid:nth-child(3n+1) { transform: rotate(-2deg); }
 .memory-card-polaroid:nth-child(3n+2) { transform: rotate(2deg); }
 .memory-card-polaroid:nth-child(3n+3) { transform: rotate(-1deg); }
@@ -233,66 +243,41 @@ footer {
 
 .tabs { display: flex; justify-content: center; margin-bottom: 20px; }
 .tab-link { background-color: #e9ecef; border: none; padding: 12px 25px; cursor: pointer; font-size: 1em; margin: 0 5px; border-radius: 5px; transition: all 0.3s; }
-.tab-link.active { background-color: #5d3a9b; color: #fff; }
+.tab-link.active { background-color: #6f42c1; color: #fff; }
 .tab-content { display: none; }
 .task-schedule { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .task-card { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 .task-group { padding: 12px; margin: 8px 0; border-radius: 5px; border-left: 5px solid #ddd; background-color: #f8f9fa; }
-/* আজকের দায়িত্বের জন্য হাইলাইটিং ইফেক্ট */
 .task-group.today {
     border-left-color: #28a745;
     font-weight: bold;
     background-color: #d4edda;
     animation: pulse 2s infinite;
 }
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); }
-}
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.4); } 70% { box-shadow: 0 0 0 10px rgba(40, 167, 69, 0); } 100% { box-shadow: 0 0 0 0 rgba(40, 167, 69, 0); } }
 .notice-board { margin-top: 30px; background-color: #fff3cd; color: #856404; padding: 20px; border: 1px solid #ffeeba; border-radius: 8px; }
 
 /* =================================
-   রেসপন্সিভ কোড (শুধুমাত্র মোবাইলের জন্য)
+   রেসপন্সিভ কোড (নতুন করে সাজানো)
    ================================= */
-
-/* ট্যাবলেট (1024px পর্যন্ত) */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+    .student-grid { grid-template-columns: repeat(4, 1fr); }
+}
+@media (max-width: 992px) {
     .student-grid { grid-template-columns: repeat(3, 1fr); }
     .group-grid { grid-template-columns: repeat(2, 1fr); }
     .memory-grid { grid-template-columns: repeat(2, 1fr); }
 }
-
-/* বড় মোবাইল এবং ছোট ট্যাবলেট (768px পর্যন্ত) */
 @media (max-width: 768px) {
-    .container { width: 95%; }
-    nav ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #fff;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-    }
+    nav ul { display: none; flex-direction: column; width: 100%; background-color: #fff; position: absolute; top: 100%; left: 0; box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
     nav ul.active { display: flex; }
     nav ul li { margin: 0; text-align: center; border-bottom: 1px solid #f0f0f0; }
     nav ul li a { display: block; padding: 15px; }
     .hamburger { display: flex; flex-direction: column; }
-    
-    .quotes-section { grid-template-columns: 1fr; }
     .student-grid { grid-template-columns: repeat(2, 1fr); }
-    .leaders { flex-direction: column; align-items: center; }
-    .leader-card { width: 90%; margin-bottom: 20px; }
-    .task-schedule { grid-template-columns: 1fr; }
+    .quotes-section, .task-schedule { grid-template-columns: 1fr; }
 }
-
-/* ছোট মোবাইল (480px পর্যন্ত) */
-@media (max-width: 480px) {
-    .student-grid { grid-template-columns: 1fr; }
-    .group-grid { grid-template-columns: 1fr; }
-    .memory-grid { grid-template-columns: 1fr; gap: 25px; }
-    .student-card { height: 260px; }
-    .hero-section h1 { font-size: 1.8rem; }
+@media (max-width: 576px) {
+    .student-grid, .group-grid, .memory-grid { grid-template-columns: 1fr; }
+    .leadership-section .leaders, .leadership-section .leader-card:first-child { grid-template-columns: 1fr; width: 100%; }
 }
