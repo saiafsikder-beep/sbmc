@@ -109,3 +109,87 @@ footer { background-color: var(--dark-color); color: #aaa; text-align: center; p
 }
 
 
+/* === মোবাইল রেসপন্সিভ ডিজাইন (Media Queries) === */
+
+@media (max-width: 768px) {
+
+    /* --- নেভিগেশন বারের লেখা ছোট করা --- */
+    nav ul li a {
+        padding: 15px 10px;
+        font-size: 0.9em;
+    }
+
+    nav .logo {
+        font-size: 1.5em;
+    }
+
+    /* --- হিরো সেকশনের টেক্সট ছোট করা --- */
+    .hero-section h1 {
+        font-size: 1.8em;
+    }
+
+    /* --- সাধারণ শিরোনাম ছোট করা --- */
+    h2 {
+        font-size: 1.6em;
+    }
+
+    /* --- কোটেশন কার্ডগুলো একটির নিচে একটি আনা --- */
+    .quote-card {
+        flex-basis: 100%;
+    }
+
+    /* --- ছাত্রের কার্ডগুলো একটি কলামে আনা --- */
+    .student-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- গ্রুপ পেজের লিডার কার্ড ও গ্রুপ কার্ড একটি কলামে আনা --- */
+    .leaders {
+        flex-direction: column;
+    }
+
+    .group-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- টাস্ক পেজের কার্ডগুলো একটির নিচে একটি আনা --- */
+    .task-schedule {
+        flex-direction: column;
+    }
+
+    /* --- মেমোরি পেজের কার্ড ছোট করা --- */
+    .memory-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .memory-card img {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .memory-content blockquote {
+        border-left: none;
+        border-top: 3px solid var(--primary-color);
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .memory-content cite {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* --- ছোট মোবাইলের জন্য নেভিগেশন বারের লেখা আরও ছোট করা --- */
+    nav ul {
+        display: none; /* ছোট স্ক্রিনে মেনু আপাতত হাইড করা হলো, ভবিষ্যতে একটি হ্যামবার্গার মেনু যোগ করা যেতে পারে */
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+
+
