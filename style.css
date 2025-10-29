@@ -72,3 +72,40 @@ footer { background-color: var(--dark-color); color: #aaa; text-align: center; p
 .notice-board { margin-top: 40px; padding: 20px; background-color: #fff3cd; border: 1px solid var(--accent-color); border-radius: 10px; }
 .notice-board h3 { color: var(--dark-color); }
 
+/* === Quotes Section New Design === */
+.quotes-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 40px 0;
+    gap: 20px;
+}
+.quote-card {
+    flex-basis: calc(50% - 10px); /* দুটি কার্ডকে পাশাপাশি ৫০% জায়গা দেবে */
+    font-style: italic;
+    color: var(--primary-color);
+    border-left: 5px solid var(--secondary-color);
+    padding: 15px 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.quote-card-full {
+    flex-basis: 100%; /* নিচের কার্ডটি সম্পূর্ণ জায়গা নেবে */
+    text-align: center;
+    font-style: italic;
+    color: var(--primary-color);
+    border-top: 5px solid var(--secondary-color);
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+.quotes-section p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+
