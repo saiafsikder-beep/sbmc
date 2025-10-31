@@ -4,73 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SBMC-26 | দৈনন্দিন কাজ</title>
+    <link rel="icon" href="./images/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">SBMC-26</a>
-            <ul>
-                <li><a href="index.html">হোম</a></li>
-                <li><a href="groups.html">আমাদের গ্রুপ</a></li>
-                <li><a href="tasks.html" class="active">দৈনন্দিন কাজ</a></li>
-                <li><a href="memories.html">স্মৃতি স্মারক</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="container">
-        <div class="tabs">
-            <button class="tab-link active" onclick="openTab(event, 'daily')">দৈনন্দিন কাজ</button>
-            <button class="tab-link" onclick="openTab(event, 'special')">বিশেষ দায়িত্ব</button>
-        </div>
+    <nav class="navbar">
+        <a href="index.html" class="nav-logo"><img src="./images/s-logo.png" alt="SBMC-26 Logo"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">হোম</a></li>
+            <li><a href="groups.html">আমাদের গ্রুপ</a></li>
+            <li><a href="tasks.html" class="active">দৈনন্দিন কাজ</a></li>
+            <li><a href="memory-tree.html">স্মৃতি অ্যালবাম</a></li>
+        </ul>
+    </nav>
 
-        <div id="daily" class="tab-content" style="display: block;">
-            <h2>দৈনন্দিন কাজ</h2>
-            <div class="task-schedule">
-                <div class="task-card">
+    <div class="container">
+        <h2 class="section-title">দৈনন্দিন কাজ</h2>
+        
+        <div id="daily-work">
+             <div class="task-columns-container">
+                <div class="task-column">
                     <h3>খাবার বন্টন</h3>
-                    <div id="daily-task-groups-1">
-                        <!-- গ্রুপগুলোর নাম এখানে JavaScript দিয়ে যুক্ত হবে -->
+                    <div class="task-group-list">
+                        <!-- All 6 groups here -->
+                        <div class="task-group-item" data-group-id="0"><div class="task-group-header">প্রথম গ্রুপ</div><ul class="task-group-members"><li>IMRAN MRIDHA (লিডার)</li><li>MD. RAJEUL KARIM</li><li>MD NAJMUL HOSEN</li><li>MD. SELIM REZA</li><li>MD A RAZZAK</li><li>RIYAD HOSSAIN</li><li>MD.FOYSAL MIA</li></ul></div>
+                        <div class="task-group-item" data-group-id="1"><div class="task-group-header">দ্বিতীয় গ্রুপ</div><ul class="task-group-members"><li>SADIK MURSALIN (লিডার)</li><li>OMAR SIKDER</li><li>MD NAZMUL ALAM</li><li>ABDULLAH AL MAMUN</li><li>MD AHMADULLAH KHAN</li><li>AMRAN HOSSAN</li><li>MD KAWSAR AHMED</li></ul></div>
+                        <div class="task-group-item" data-group-id="2"><div class="task-group-header">তৃতীয় গ্রুপ</div><ul class="task-group-members"><li>MAHMUD BIN MOIN (লিডার)</li><li>IQBAL HUSSAIN</li><li>ABDUR RAHMAN</li><li>MD AZAHAR MIA</li><li>HUSAIN AHMED JAMAL</li><li>ABDUR RAHMAN</li><li>ISHTIAQUE</li></ul></div>
+                        <div class="task-group-item" data-group-id="3"><div class="task-group-header">চতুর্থ গ্রুপ</div><ul class="task-group-members"><li>AZIZUL HAQ HASIB (লিডার)</li><li>RIDAY HASAN MAMUN</li><li>AL-AMIN</li><li>SAHED UDDIN</li><li>MD. ALAM MIA</li><li>SAZZAK HOSSAIN SHANTO</li></ul></div>
+                        <div class="task-group-item" data-group-id="4"><div class="task-group-header">পঞ্চম গ্রুপ</div><ul class="task-group-members"><li>MUHAMMAD SAFWAN AHMAD (লিডার)</li><li>MD. KAMAL HOSSAIN</li><li>MD. MASUM BILLAH</li><li>SHOEB AKTER DRISSO</li><li>FOKIR SAKIB</li><li>MD.SHEKH FORID</li><li>MD MEJU BABU</li></ul></div>
+                        <div class="task-group-item" data-group-id="5"><div class="task-group-header">ষষ্ঠ গ্রুপ</div><ul class="task-group-members"><li>MARUFUR RAHMAN (লিডার)</li><li>MD MAHMUDUL HASAN SAGOR</li><li>FAHAD TALUKDER</li><li>MD. MEHERAB HOSSEN MAHI</li><li>MD. KAUSAR ALI</li><li>MD. RUHUL AMIN</li><li>MD. RAHAT HUSSAIN</li></ul></div>
                     </div>
                 </div>
-                <div class="task-card">
+                <div class="task-column">
                     <h3>ময়লার ঝুড়ি পরিষ্কার</h3>
-                    <div id="daily-task-groups-2">
-                         <!-- গ্রুপগুলোর নাম এখানে JavaScript দিয়ে যুক্ত হবে -->
-                    </div>
-                </div>
-            </div>
-            <div class="notice-board">
-                <h3>নোটিশ বোর্ড</h3>
-                <p>এখানে প্রতিদিনের নোটিশ লেখা হবে। যেমন: "আজ আসরের পর সকল সদস্যের উপস্থিতি বাধ্যতামূলক।" এই লেখাটি পরিবর্তন করতে `tasks.html` ফাইলটি এডিট করুন।</p>
-            </div>
-        </div>
-
-        <div id="special" class="tab-content">
-            <h2>বিশেষ দায়িত্ব (প্রতি ৬ সপ্তাহ পর)</h2>
-            <div class="task-schedule">
-                <div class="task-card">
-                    <h3>ওয়াশরুম পরিষ্কার</h3>
-                     <div id="special-task-groups-1">
-                        <!-- গ্রুপগুলোর নাম এখানে JavaScript দিয়ে যুক্ত হবে -->
-                    </div>
-                </div>
-                <div class="task-card">
-                    <h3>মসজিদ পরিষ্কার</h3>
-                    <div id="special-task-groups-2">
-                         <!-- গ্রুপগুলোর নাম এখানে JavaScript দিয়ে যুক্ত হবে -->
+                    <div class="task-group-list">
+                         <!-- All 6 groups here again -->
+                         <div class="task-group-item" data-group-id="0"><div class="task-group-header">প্রথম গ্রুপ</div><ul class="task-group-members"><li>IMRAN MRIDHA (লিডার)</li><li>MD. RAJEUL KARIM</li><li>MD NAJMUL HOSEN</li><li>MD. SELIM REZA</li><li>MD A RAZZAK</li><li>RIYAD HOSSAIN</li><li>MD.FOYSAL MIA</li></ul></div>
+                        <div class="task-group-item" data-group-id="1"><div class="task-group-header">দ্বিতীয় গ্রুপ</div><ul class="task-group-members"><li>SADIK MURSALIN (লিডার)</li><li>OMAR SIKDER</li><li>MD NAZMUL ALAM</li><li>ABDULLAH AL MAMUN</li><li>MD AHMADULLAH KHAN</li><li>AMRAN HOSSAN</li><li>MD KAWSAR AHMED</li></ul></div>
+                        <div class="task-group-item" data-group-id="2"><div class="task-group-header">তৃতীয় গ্রুপ</div><ul class="task-group-members"><li>MAHMUD BIN MOIN (লিডার)</li><li>IQBAL HUSSAIN</li><li>ABDUR RAHMAN</li><li>MD AZAHAR MIA</li><li>HUSAIN AHMED JAMAL</li><li>ABDUR RAHMAN</li><li>ISHTIAQUE</li></ul></div>
+                        <div class="task-group-item" data-group-id="3"><div class="task-group-header">চতুর্থ গ্রুপ</div><ul class="task-group-members"><li>AZIZUL HAQ HASIB (লিডার)</li><li>RIDAY HASAN MAMUN</li><li>AL-AMIN</li><li>SAHED UDDIN</li><li>MD. ALAM MIA</li><li>SAZZAK HOSSAIN SHANTO</li></ul></div>
+                        <div class="task-group-item" data-group-id="4"><div class="task-group-header">পঞ্চম গ্রুপ</div><ul class="task-group-members"><li>MUHAMMAD SAFWAN AHMAD (লিডার)</li><li>MD. KAMAL HOSSAIN</li><li>MD. MASUM BILLAH</li><li>SHOEB AKTER DRISSO</li><li>FOKIR SAKIB</li><li>MD.SHEKH FORID</li><li>MD MEJU BABU</li></ul></div>
+                        <div class="task-group-item" data-group-id="5"><div class="task-group-header">ষষ্ঠ গ্রুপ</div><ul class="task-group-members"><li>MARUFUR RAHMAN (লিডার)</li><li>MD MAHMUDUL HASAN SAGOR</li><li>FAHAD TALUKDER</li><li>MD. MEHERAB HOSSEN MAHI</li><li>MD. KAUSAR ALI</li><li>MD. RUHUL AMIN</li><li>MD. RAHAT HUSSAIN</li></ul></div>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024, SBMC-26 | সমস্ত অধিকার সংরক্ষিত।</p>
-    </footer>
-
+        
+        <section class="notice-board-section">
+            <h2 class="section-title">নোটিশ বোর্ড</h2>
+            <div class="notice-board"><div class="notice-content"><h2>আজকের ঘোষণা</h2><p>সকল ছাত্রদের জানানো যাচ্ছে যে, আগামীকাল সকাল ১০টায় একটি বিশেষ ক্লাসের আয়োজন করা হয়েছে। সকলের উপস্থিতি বাধ্যতামূলক।</p></div></div>
+        </section>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
